@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Focus.io",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "version": "1.0.0",
+    "description": "Removes distracting content from Youtube and Yahoo",
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*", "https://www.yahoo.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "permissions": [
+      "storage",
+      "tabs"
+    ]
+  }
